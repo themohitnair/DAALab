@@ -56,10 +56,6 @@ int main(void) {
     FILE *fp;
 
     fp = fopen("timing_data.csv", "w");
-    if (fp == NULL) {
-        perror("Error opening file");
-        return EXIT_FAILURE;
-    }
     fprintf(fp, "n,Linear Search Time,Binary Search Time\n");
 
     int n[10] = {10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000};
@@ -87,5 +83,4 @@ int main(void) {
     }
 
     fclose(fp);
-    return EXIT_SUCCESS;
 }

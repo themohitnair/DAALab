@@ -19,7 +19,7 @@ def plot_timing_data(csv_file):
 
     plt.xlabel('n (Number of Elements)', fontsize=12)
     plt.ylabel('Time (seconds)', fontsize=12)
-    plt.title('Comparison of Selection and Binary Sort Times', fontsize=14)
+    plt.title('Comparison of Selection and Bubble Sort Times', fontsize=14)
     plt.xscale('log')
     plt.yscale('log') 
     plt.grid(True)
