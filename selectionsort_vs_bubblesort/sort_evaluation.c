@@ -20,11 +20,11 @@ void selectionsort(int* arr, int n) {
 
 void bubblesort(int* arr, int n) {
     for(int i = 0; i < n-1; i++) {
-        for(int j = 0; j < n-2; j++) {
+        for(int j = 0; j < n-1-i; j++) {
             if (arr[j] > arr[j+1]) {
                 int temp = arr[j];
                 arr[j] = arr[j+1];
-                arr[j+1] = arr[j];
+                arr[j+1] = temp;
             }
         }
     }
@@ -71,14 +71,18 @@ int main(void) {
         }
 
         for (int j = 0; j < n[i]; j++) {
+        if (j == 0) {
+            arr[j] = rand() % (n[i] + 1);
+        } else {
             int gen = rand() % (n[i] + 1);
             if (gen <= arr[j-1]) {
                 arr[j] = gen;
             }
         }
+}
 
-        double time_elapsed_selsort = calculate_selsort(1000, n[i], arr);
-        double time_elapsed_bubsort = calculate_bubsort(1000, n[i], arr);
+        double time_elapsed_selsort = calculate_selsort(10000, n[i], arr);
+        double time_elapsed_bubsort = calculate_bubsort(10000, n[i], arr);
 
         printf("\nFor n = %d elements:\n", n[i]);
         printf("Selection Sort: %11.4e\tBubble Sort: %11.4e\n", time_elapsed_selsort, time_elapsed_bubsort);
