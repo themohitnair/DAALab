@@ -53,18 +53,12 @@ double calculate_binsearch(int iterations, int size, int *arr, int key) {
 }
 
 int main(void) {
-    FILE *fp;
-
-    fp = fopen("timing_data.csv", "w");
-    fprintf(fp, "n,Linear Search Time,Binary Search Time\n");
-
     int n[10] = {10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000};
     for (int i = 0; i < 10; i++) {
         int key = n[i] + 20;
         int *arr = (int *)malloc(n[i] * sizeof(int));
         if (arr == NULL) {
             perror("Memory allocation failed");
-            fclose(fp);
             return EXIT_FAILURE;
         }
 
@@ -72,15 +66,13 @@ int main(void) {
             arr[j] = rand() % (n[i] + 1);
         }
 
-        double time_elapsed_linear = calculate_linsearch(1000000, n[i], arr, key);
-        double time_elapsed_binary = calculate_binsearch(1000000, n[i], arr, key);
+        double time_elapsed_linear = calculate_linsearch(1000, n[i], arr, key);
+        double time_elapsed_binary = calculate_binsearch(1000, n[i], arr, key);
+        
 
         printf("\nFor n = %d elements:\n", n[i]);
         printf("Linear Search: %11.4e\tBinary Search: %11.4e\n", time_elapsed_linear, time_elapsed_binary);
-        fprintf(fp, "%d,%.6e,%.6e\n", n[i], time_elapsed_linear, time_elapsed_binary);
 
         free(arr);
     }
-
-    fclose(fp);
 }
