@@ -55,41 +55,33 @@ double calculate_bubsort(int iterations, int size, int *arr) {
 }
 
 int main(void) {
-    FILE *fp;
-
-    fp = fopen("timing_data.csv", "w");
-    fprintf(fp, "n,Selection Sort Time,Bubble Sort Time\n");
-
     int n[10] = {10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000};
     for (int i = 0; i < 10; i++) {
         int key = n[i] + 20;
         int *arr = (int *)malloc(n[i] * sizeof(int));
         if (arr == NULL) {
             perror("Memory allocation failed");
-            fclose(fp);
             return EXIT_FAILURE;
         }
 
         for (int j = 0; j < n[i]; j++) {
-        if (j == 0) {
-            arr[j] = rand() % (n[i] + 1);
-        } else {
-            int gen = rand() % (n[i] + 1);
-            if (gen <= arr[j-1]) {
-                arr[j] = gen;
+            if (j == 0) {
+                arr[j] = rand() % (n[i] + 1);
+            } else {
+                int gen = rand() % (n[i] + 1);
+                if (gen <= arr[j-1]) {
+                    arr[j] = gen;
+                }
             }
         }
-}
 
-        double time_elapsed_selsort = calculate_selsort(10000, n[i], arr);
-        double time_elapsed_bubsort = calculate_bubsort(10000, n[i], arr);
+        double time_elapsed_selsort = calculate_selsort(1000, n[i], arr);
+        double time_elapsed_bubsort = calculate_bubsort(1000, n[i], arr);
 
         printf("\nFor n = %d elements:\n", n[i]);
         printf("Selection Sort: %11.4e\tBubble Sort: %11.4e\n", time_elapsed_selsort, time_elapsed_bubsort);
-        fprintf(fp, "%d,%.6e,%.6e\n", n[i], time_elapsed_selsort, time_elapsed_bubsort);
 
         free(arr);
     }
 
-    fclose(fp);
 }
