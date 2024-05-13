@@ -1,6 +1,7 @@
 # DAALab
 A collection of Design and Analysis of Algorithms Laboratory Programs (ISL46, RITB ISE 2022) 
 
+## Graphs
 ![Binary Search vs Linear Search](https://github.com/themohitnair/DAALab/blob/main/binarysearch_vs_linearsearch/bsearch_vs_lsearch.png)
 ![Selection Sort vs Bubble Sort](https://github.com/themohitnair/DAALab/blob/main/selectionsort_vs_bubblesort/bsort_vs_ssort.png)
 ![Factorial Recursive vs Iterative](https://github.com/themohitnair/DAALab/blob/main/factorial_recursive_vs_iterative/factorial_recursive_vs_iterative.png)
