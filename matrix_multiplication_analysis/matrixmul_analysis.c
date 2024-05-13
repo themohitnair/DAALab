@@ -55,6 +55,8 @@ double calculate_matmul_time(int order, int iterations) {
         multiply_matrices(mat1, mat2, order);
         end = clock();
         elapsed_time += ((double)(end - start))/CLOCKS_PER_SEC;
+        free_matrix(mat1, order);
+        free_matrix(mat2, order);
     }
     return elapsed_time/iterations;
 }
