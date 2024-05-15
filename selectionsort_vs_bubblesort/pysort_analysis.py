@@ -18,6 +18,50 @@ def selection_sort(arr):
                 min = j
         if min != i:
             arr[i], arr[min] = arr[min], arr[i]
+
+def merge_sort(arr: list, low: int, high: int): 
+    if low < high:
+        mid = (low + high) // 2
+        merge_sort(arr, low, mid)
+        merge_sort(arr, mid + 1, high)
+        merge(arr, low, mid, high)
+
+def merge(arr, low, mid, high):
+    len1 = mid - low + 1
+    len2 = high - mid
+
+    # Create temporary arrays for left and right halves
+    left_arr = arr[low:mid + 1]
+    right_arr = arr[mid + 1:high + 1]
+
+    i = 0  # Index for left_arr
+    j = 0  # Index for right_arr
+    k = low  # Index for merged array
+
+    # Merge the left and right arrays back into arr
+    while i < len1 and j < len2:
+        if left_arr[i] <= right_arr[j]:
+            arr[k] = left_arr[i]
+            i += 1
+        else:
+            arr[k] = right_arr[j]
+            j += 1
+        k += 1
+
+    # Copy remaining elements of left_arr, if any
+    while i < len1:
+        arr[k] = left_arr[i]
+        i += 1
+        k += 1
+
+    # Copy remaining elements of right_arr, if any
+    while j < len2:
+        arr[k] = right_arr[j]
+        j += 1
+        k += 1
+
+
+
         
 def mean_time(arr: list, sort_func, index: int):
     total_time = 0.0
@@ -53,20 +97,6 @@ def plot_comparison(x_axis: list, data_algo2: tuple[str, list], data_algo1: tupl
     plt.show()
 
 
-def main():
-    arr = []
-    bubble_sort_time = []
-    selection_sort_time = []
-    
-    n_vals = list(range(50,1000,50))
-    for n in n_vals:
-        index = 25
-        arr = populate_array_descending(n)
-        bubble_sort_time.append(mean_time(arr, bubble_sort, index))
-        selection_sort_time.append(mean_time(arr, selection_sort, index))
-
-    plot_comparison(n_vals, ('Bubble Sort', bubble_sort_time), ('Selection Sort', selection_sort_time), 'bsort_vs_ssort')    
-
-
-if __name__ == "__main__":
-    main()
+a = [3,5,4,1,7,0,2]
+merge_sort(a, 0, len(a)-1)
+print(a)
