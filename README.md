@@ -9,3 +9,4 @@ A collection of Design and Analysis of Algorithms Laboratory Programs (ISL46, RI
 ![Fibonacci Recursive vs Iterative](https://github.com/themohitnair/DAALab/blob/main/fibonacci_recursive_vs_iterative/fibonacci_recursive_vs_iterative.png)
 ![Array Unique Checking Analysis](https://github.com/themohitnair/DAALab/blob/main/unique_checking_analysis/uniquecheck_analysis.png)
 ![Matrix Multiplication Analysis](https://github.com/themohitnair/DAALab/blob/main/matrix_multiplication_analysis/matrixmul_analysis.png)
+![Merge Sort Analysis](https://github.com/themohitnair/DAALab/blob/main/mergesort_analysis/mergesort_analysis.png)
