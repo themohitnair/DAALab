@@ -21,7 +21,7 @@ def shift_table(pattern: str):
     for i in range(128):
         table.append(m)
     for j in range(m - 1):
-        table[ord(pattern[j]) - ord('0')] = m - 1 - j
+        table[ord(pattern[j])] = m - 1 - j
     return table
 
 def horspool_string_match(string: str, pattern: str, table: list):
@@ -35,7 +35,7 @@ def horspool_string_match(string: str, pattern: str, table: list):
         if j == m:
             return i - m + 1
         else:
-            j += table[ord(string[j]) - ord('0')]
+            i += table[ord(string[i])]
     return -1
 
 def generate_random_string(length, exclude_letters: str):
@@ -50,9 +50,9 @@ def generate_random_string(length, exclude_letters: str):
 
 def mean_time(match_func, iterations: int, length: int):
     total_time = 0.0
-    for i in range(iterations):        
-        pattern = 'AEIOUaeiou'
-        table = shift_table(pattern)
+    pattern = 'AEIOUaeiou' 
+    table = shift_table(pattern)
+    for i in range(iterations):                
         string = generate_random_string(length, pattern)
         start_time = time.perf_counter()
         match_func(string, pattern, table)
