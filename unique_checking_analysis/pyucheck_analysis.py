@@ -32,8 +32,6 @@ def plot_algo(x_axis: list, data_algo: tuple[str, list], filename: str):
     fig, ax = plt.subplots(figsize=(12,8))
 
     ax.plot(x_axis, data_algo[1], marker='o', label=data_algo[0])
-
-
     ax.set_facecolor('lightgreen')
     ax.set_title(f'{data_algo[0]} Analysis', fontsize=24)
     ax.set_xlabel('Input Size (n)', fontsize=18)
@@ -53,7 +51,6 @@ def main():
         ucheck_times.append(mean_time(unique_check, n, 1000, unique_populate(n, n*10)))
     
     plot_algo(n_vals, ('Array Unique Checking', ucheck_times), 'uniquecheck_analysis')
-
 
 if __name__ == "__main__":
     main()

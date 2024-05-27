@@ -54,8 +54,6 @@ def plot_algo(x_axis: list, data_algo: tuple[str, list], filename: str):
     fig, ax = plt.subplots(figsize=(12,8))
 
     ax.plot(x_axis, data_algo[1], marker='o', label=data_algo[0])
-
-
     ax.set_facecolor('lightgreen')
     ax.set_title(f'{data_algo[0]} Analysis', fontsize=24)
     ax.set_xlabel('Input Size (n)', fontsize=18)
@@ -77,7 +75,6 @@ def main():
         mergesort_times.append(mean_time(arr, merge_sort, iterations))
     
     plot_algo(n_vals, ('Merge Sort', mergesort_times), 'mergesort_analysis')
-
 
 if __name__ == "__main__":
     main()

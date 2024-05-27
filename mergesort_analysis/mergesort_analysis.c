@@ -50,7 +50,6 @@ void merge_sort(int* a, int low, int high) {
     }
 }
 
-
 double calculate_mergesort(int iterations, int size, int *arr) {
     double time_elapsed_mergesort = 0;
     for (int k = 0; k < iterations; k++) {
@@ -91,5 +90,4 @@ int main(void) {
 
         free(arr);
     }
-
 }

@@ -44,7 +44,6 @@ def plot_comparison(x_axis: list, data_algo2: tuple[str, list], data_algo1: tupl
 
     plt.show()
 
-
 def main():
     recursive_factorial_times = []
     iterative_factorial_times = []

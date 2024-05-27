@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import random
 import time 
 
-
 def linear_search(arr: list, key: int) -> int:
     for i in range(len(arr)):
         if arr[i] == key:
@@ -57,7 +56,6 @@ def plot_comparison(x_axis: list, data_algo2: tuple[str, list], data_algo1: tupl
 
     plt.show()
 
-
 def main():
     arr = []
     binary_search_time = []
@@ -73,10 +71,5 @@ def main():
 
     plot_comparison(n_vals, ('Binary Search', binary_search_time), ('Linear Search', linear_search_time), 'bsearch_vs_lsearch')
 
-    
-
-
 if __name__ == "__main__":
     main()
-    
-
