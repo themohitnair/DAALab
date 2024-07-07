@@ -12,3 +12,4 @@ A collection of Design and Analysis of Algorithms Laboratory Programs (ISL46, RI
 ![Merge Sort Analysis](https://github.com/themohitnair/DAALab/blob/main/mergesort_analysis/mergesort_analysis.png)
 ![Quick Sort Analysis](https://github.com/themohitnair/DAALab/blob/main/quicksort_analysis/quicksort_analysis.png)
 ![String Matching Algorithms](https://github.com/themohitnair/DAALab/blob/main/bruteforcestringmatch_vs_horspoolstringmatch/naive_vs_horspool.png)
+![Tree Traversal Algorithms]()
