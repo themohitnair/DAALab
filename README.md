@@ -18,5 +18,5 @@ A collection of Design and Analysis of Algorithms Laboratory Programs (ISL46, RI
 ![Floyd-Warshall Algorithm](https://github.com/themohitnair/DAALab/blob/main/floyd_analysis/floyd_warshall_analysis.png)
 ![Knapsack Algorithm](https://github.com/themohitnair/DAALab/blob/main/knapsack_analysis/knapsack_analysis.png)
 ![Kruskal Algorithm](https://github.com/themohitnair/DAALab/blob/main/kruskal_analysis/kruskal_analysis.png)
-![Dijkstra Algorithm](https://github.com/themohitnair/DAALab/tree/main/dijkstra_analysis)
-![Breadth-First Search vs Depth-First Search](https://github.com/themohitnair/DAALab/tree/main/bfs_vs_dfs)
+![Dijkstra Algorithm](https://github.com/themohitnair/DAALab/blob/main/dijkstra_analysis/dijkstra_analysis.png)
+![Breadth-First Search vs Depth-First Search](https://github.com/themohitnair/DAALab/blob/main/bfs_vs_dfs/bfs_vs_dfs_stack.png)
