@@ -16,3 +16,4 @@
 ![Kruskal Algorithm](kruskal_analysis/kruskal_analysis.png)
 ![Dijkstra Algorithm](dijkstra_analysis/dijkstra_analysis.png)
 ![Breadth-First Search vs Depth-First Search](bfs_vs_dfs/bfs_vs_dfs_stack.png)
+![Heap Sort Analysis](heapsort_analysis/heapsort_analysis.png)
