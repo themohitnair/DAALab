@@ -36,6 +36,11 @@ Consider a list of ‘n’ files numbered using ID’s. Write a program to sort 
 
 ![](quick_sort/Quick%20Sort.png)
 
+## Program 6:
+Consider the problem of searching for a pattern in a given string.  Design a program to locate the pattern using Horspool’s algorithm. Give the trace of this algorithm. Find its time complexity.
+
+![](horspool/Horspool%20String%20Search.png)
+
 ## Program 7:
 Consider a network of ‘n’ cities which is represented as a Graph. 
 a. Write a program to find the transitive closure of such a network using Warshall’s algorithm. 
@@ -44,3 +49,8 @@ Give the trace of both algorithms. Find its time complexity.
 
 ![](warshall/Warshall%20Algorithm.png)
 ![](floyd/Floyd%20Algorithm.png)
+
+## Program 12:
+A university is looking for engineering graduates, they need to sort the candidate‘s resume based on their ranking. Write a C program to sort the resumes by using heap sort. Determine the time required to sort the elements. Plot a graph of the number of elements versus time taken. Specify the time efficiency class of this algorithm.
+
+![](heap_sort/Heap%20Sort.png)

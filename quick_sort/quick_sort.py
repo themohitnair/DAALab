@@ -5,10 +5,11 @@ def sort(arr: list[int], low: int, high: int):
         sort(arr, low, pi - 1)
         sort(arr, pi + 1, high)
 
-def hoare_partition(arr: list[int], low: int, high: int) -> int:
+def hoare_partition(arr: list[int], low: int, high: int):
     pivot = arr[(low + high) // 2]
-    i = low - 1
-    j = high + 1
+    n = len(arr)
+    i = -1
+    j = n
 
     while True:
         i += 1
@@ -27,3 +28,5 @@ def hoare_partition(arr: list[int], low: int, high: int) -> int:
 def quick_sort(arr: list[int]) -> list[int]:
     sort(arr, 0, len(arr) - 1)
     return arr
+
+print(quick_sort([5,4,3,2,1]))
