@@ -50,6 +50,26 @@ Give the trace of both algorithms. Find its time complexity.
 ![](warshall/Warshall%20Algorithm.png)
 ![](floyd/Floyd%20Algorithm.png)
 
+## Program 8:
+Given ‘N’ items with their weight and value. Also, a bag is given whose capacity is ‘W’. Write a C program based on dynamic programming design technique to find the subset of items that fit into the bag and earn maximum profit. Give the trace of this algorithm. Find its time complexity.
+
+![](knapsack/Knapsack%20Problem.png)
+
+## Program 9:
+Consider an electrical layout where ‘n’ houses are connected by electrical wires. Design a  program using Kruskal’s Algorithm to output a connection with minimum cost. Trace the algorithm. Find its time complexity.
+
+![](kruskal/Kruskal.png)
+
+## Program 10:
+Given a weighted connected graph of N cities, write a  program to find shortest paths from a given city to all other cities using Dijkstra's algorithm. Give the trace of this algorithm. Find its time complexity.
+
+![](dijkstra/Dijkstra.png)
+
+## Program 11:
+Write program to print all the nodes reachable from a given starting node in a digraph by using BFS method. Give the trace of this algorithm.
+
+![](bfs/)
+
 ## Program 12:
 A university is looking for engineering graduates, they need to sort the candidate‘s resume based on their ranking. Write a C program to sort the resumes by using heap sort. Determine the time required to sort the elements. Plot a graph of the number of elements versus time taken. Specify the time efficiency class of this algorithm.
 

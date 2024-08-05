@@ -23,7 +23,7 @@ def get_mean_times(func: callable, sizes: list[int] = list(range(50, 1050, 50)),
         mean_times.append(total_time / iterations)
     return mean_times
 
-def plot(algo_name: str, param_list: list[float], sizes: list[int] = list(range(500, 10500, 500))):
+def plot(algo_name: str, param_list: list[float], sizes: list[int] = list(range(50, 1050, 50))):
     plt.figure(figsize=(10, 6))
     plt.grid(visible=True)
     plt.title(algo_name)

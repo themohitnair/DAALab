@@ -8,12 +8,13 @@ def generate_random_string_and_pattern(size: int) -> (str, str):
     for i in range(size):
         string.append(str(random.randint(0, 128)))
     string = "".join(string)
-    m = len(string) // 5
-    pattern = string[-5:]
-
+    pattern = []
+    for i in range(size // 3):
+        pattern.append(str(random.randint(0, 128)))
+    pattern = "".join(pattern)
     return pattern, string
 
-def get_mean_time(search_func: callable, sizes: list[int] = list(range(50, 1050, 50)), iterations: int = 100) -> list[float]:
+def get_mean_time(search_func: callable, sizes: list[int] = list(range(500, 10500, 500)), iterations: int = 300) -> list[float]:
     mean_times = []
     for size in sizes:
         total_time = 0.0
@@ -26,7 +27,7 @@ def get_mean_time(search_func: callable, sizes: list[int] = list(range(50, 1050,
         mean_times.append(total_time / iterations)
     return mean_times
 
-def plot(algo_name: str, param_list: list[float], sizes: list[int] = list(range(50, 1050, 50))):
+def plot(algo_name: str, param_list: list[float], sizes: list[int] = list(range(500, 10500, 500))):
     plt.figure(figsize=(10, 6))
     plt.grid(visible=True)
     plt.title(algo_name)

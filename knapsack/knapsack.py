@@ -11,5 +11,3 @@ def knapsack(p: list[int], w: list[int], W) -> int:
             else:
                 V[i][j] = V[i - 1][j]
     return V[n][W]
-
-print(knapsack([12, 10, 20, 15], [2, 1, 3, 2], 5))
