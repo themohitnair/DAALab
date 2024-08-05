@@ -1,6 +1,6 @@
 from collections import deque
 
-def bfs(mat: list[int], source: int):
+def bfs(mat: list[list[int]], source: int):
     n = len(mat)
     queue = deque([source])
     visited = [False] * n
