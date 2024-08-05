@@ -18,11 +18,11 @@ def gen_array_and_key_binary(size: int, case: str) -> (list[int], int):
     if case == 'w':
         return list(range(size)), size
     if case == 'b':
-        mid = size // 2
+        mid = (size - 1) // 2
         array = list(range(size))
         return array, array[mid]
     if case == 'a':
-        return [random.randint(0, size) for i in range(size)], random.randint(0, size)       
+        return [random.randint(0, size) for i in range(size)], random.randint(0, (size - 1) // 2)       
 
 def get_comparison_numbers(search_func: callable, generation_function: callable, sizes: list[int], case: str) -> list[int]:
     comparison_numbers = []

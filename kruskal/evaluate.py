@@ -40,7 +40,7 @@ def plot(algo_name: str, param_list: list[float], sizes: list[int] = list(range(
     plt.figure(figsize=(10, 6))
     plt.grid(visible=True)
     plt.title(algo_name)
-    plt.xlabel('Matrix Orders')
+    plt.xlabel('Number of nodes')
     plt.ylabel('Average Time Taken')
     plt.plot(sizes, param_list, marker="o", color="blue")
     plt.savefig(f'{algo_name}.png', dpi=300)
