@@ -23,14 +23,3 @@ def dijkstra(mat: list[list[int]], source: int):
                     heapq.heappush(min_heap, (dist[v], v))
 
     return dist
-
-adj_matrix = [
-    [0, 10, 0, 0, 0, 0],
-    [10, 0, 5, 0, 0, 0],
-    [0, 5, 0, 20, 1, 0],
-    [0, 0, 20, 0, 2, 5],
-    [0, 0, 1, 2, 0, 3],
-    [0, 0, 0, 5, 3, 0]
-]
-
-print(dijkstra(adj_matrix, 0))
